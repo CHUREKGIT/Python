@@ -4,7 +4,7 @@ avaible_coins = list(map(float, user_coins.split()))
 avaible_coins.sort(reverse=True)
 change_in_coins = []
 
-while (change > min(avaible_coins)):
+while (change >= min(avaible_coins)):
     for coin in avaible_coins:
         if coin <= change:
             change_in_coins.append(coin)
