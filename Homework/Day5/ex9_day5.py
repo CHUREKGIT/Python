@@ -1,12 +1,4 @@
-matrix = [["*", "*,", "*", "*"],
-          ["*", "*,", "*", "*"],
-          ["*", "*,", "*", "*"],
-          ["*", "*,", "*", "*"],
-          ["*", "*,", "*", "*"],
-          ]
+matrix_raw = ["*" * 4]
+for i in range(0,5):
+    print(f"{matrix_raw}")
 
-print(matrix[0])
-print(matrix[1])
-print(matrix[2])
-print(matrix[3])
-print(matrix[4])
