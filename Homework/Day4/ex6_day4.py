@@ -1,12 +1,11 @@
 number = int(input("Give me a number"))
-multiplier = range(1,11)
 
-for i in multiplier:
-    print(i, end=" ")
+table = []
 
-print()
+for i in range(1,11):
+    table.append(number * i)
+    preformat_string = "{}," * 10
 
-for i in multiplier:
-    print(i*number, end=" ")
+score = preformat_string.format(*table)
 
-##formating string?
+print(score)
