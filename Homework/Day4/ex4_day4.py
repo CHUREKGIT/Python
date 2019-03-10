@@ -1,4 +1,4 @@
-#Print numbers from 1 to 20. Only these that are not divided be 4.
+#Print numbers from 1 to 20. Only these that are not divided by 4.
 
 to_20 = range(1, 21)
 
