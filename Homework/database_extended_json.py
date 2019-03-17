@@ -2,6 +2,7 @@ import json
 
 data=[]
 
+#show database
 with open('database.json') as database:
     data = json.load(database)
     print(f"This is your database:\n{data['users']}")
