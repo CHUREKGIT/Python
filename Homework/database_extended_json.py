@@ -38,19 +38,26 @@ def remover():
 
     name_delete = (input("Provide user name to delete\n"))
 
-##I cant find idea for validation here :(
-
     for dict in data['users']:
-        for key, value in dict.items():
-            if value == name_delete:
-                dict.clear() #only this working. del dict doesnt. I dont know why :(
 
-                # updating file
-                with open('database.json', 'w') as database:
-                    json.dump(data, database)
-                #confirmation
-                print(f"User has been deleted\n")
-                break
+        #collecting all names in one variable for validation
+        names = [ names for names in dict.values()]
+
+        #validation
+        if name_delete in names:
+
+            for key, value in dict.items():
+                if value == name_delete:
+                    dict.clear() #only this working. del dict doesnt. I dont know why :(
+
+                    # updating file
+                    with open('database.json', 'w') as database:
+                        json.dump(data, database)
+                    #confirmation
+                    print(f"User has been deleted\n")
+                    break
+    else:
+        print("I can't find this user in database")
 
     choices()
 
