@@ -10,7 +10,12 @@ with open('database.json') as database:
 #function to get choice from user
 def choices():
  global choice
- choice = int(input("What do you want to do:\n[0] - exit program\n[1] - add new user\n[2] - delete existing user\n[3] - check user in database\n[4] - check number of user in database\n"))
+ choice = int(input("What do you want to do:\
+ \n[0] - exit program\
+ \n[1] - add new user\
+ \n[2] - delete existing user\
+ \n[3] - check user in database\
+ \n[4] - check number of user in database\n"))
 
 #function to add new object to database and to json
 def adding():
@@ -48,7 +53,7 @@ def remover():
 
             for key, value in dict.items():
                 if value == name_delete:
-                    dict.clear() #only this working. del dict doesnt. I dont know why :(
+                    dict.clear();
 
                     # updating file
                     with open('database.json', 'w') as database:
@@ -56,8 +61,8 @@ def remover():
                     #confirmation
                     print(f"User has been deleted\n")
                     break
-    else:
-        print("I can't find this user in database")
+        else:
+            print("I can't find this user in database")
 
     choices()
 
@@ -106,5 +111,9 @@ while choice > 0:
     if choice == 3:
         checker()
     if choice == 4:
-        print(f"Our database has {len(data['users'])} users")
+        list_users = []
+        for users in data['users']:
+            if users != {}:
+                list_users.append(users)
+        print(f"In your database are {len(list_users)} users")
         choices()
