@@ -1,1 +1,1 @@
-{"users": [{"name": "Kubus", "lastname": "Kowalski", "phone": 609848201}, {"name": "Tom", "lastname": "Hanks", "phone": 687453412}]}
+{"users": [["Tom", "Hanks", 687453412], ["test", "test", 829183928], ["Kubus", "Bubek", 2381908321]]}
