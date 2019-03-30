@@ -7,7 +7,7 @@ y = int(input("Give me last number from range"))
 palidroms = []
 fair_and_square = []
 
-for number in range(x,(y+1)**2):
+for number in range(round(math.sqrt(x)),y+1):
     if number in range(1, 10):
         palidroms.append(number)
     if number >= 10 and str(number)[::-1] == str(number):
